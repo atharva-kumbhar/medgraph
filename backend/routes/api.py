@@ -97,12 +97,20 @@ def graphrag(body: QueryRequest) -> dict[str, Any]:
 
 @router.post("/query")
 def query(body: QueryRequest) -> dict[str, Any]:
+    import logging
+    logger = logging.getLogger(__name__)
     try:
+        logger.info(f"Processing query: {body.query[:100]}")
         return service.run_query(body.query, body.reference_answer)
     except ValueError as exc:
+        logger.error(f"ValueError: {exc}")
         raise HTTPException(status_code=400, detail=str(exc)) from exc
+    except TimeoutError as exc:
+        logger.error(f"TimeoutError: {exc}")
+        raise HTTPException(status_code=504, detail=f"Request timeout: {str(exc)}") from exc
     except Exception as exc:
-        raise HTTPException(status_code=500, detail=str(exc)) from exc
+        logger.exception(f"Unexpected error in /api/query: {exc}")
+        raise HTTPException(status_code=500, detail=f"Internal error: {str(exc)[:200]}") from exc
 
 
 @router.post("/metrics")

@@ -110,6 +110,8 @@ class PipelineService:
         *,
         llm_provider: str | None = None,
     ) -> dict[str, Any]:
+        import logging
+        logger = logging.getLogger(__name__)
         query = self._clean_query(query)
         provider = llm_provider
         reference_answer = self._clean_optional_text(reference_answer)
@@ -138,7 +140,13 @@ class PipelineService:
                     "cyan",
                 ),
             }
-            timed_results = {key: future.result() for key, future in futures.items()}
+            timed_results = {}
+            for key, future in futures.items():
+                try:
+                    timed_results[key] = future.result(timeout=180)
+                except Exception as exc:
+                    logger.exception(f"Pipeline {key} failed: {exc}")
+                    timed_results[key] = self._error_result(key, str(exc))
 
         pipelines = {
             key: self._attach_latency(result.value, result.latency_ms)
@@ -825,6 +833,26 @@ Instructions:
             return timed(fn)
         except Exception as exc:
             return timed(lambda: self._pipeline_error(key, label, accent, exc))
+
+    def _error_result(self, key: str, error_msg: str) -> dict[str, Any]:
+        """Create a timed error result for when a pipeline thread fails."""
+        label_map = {
+            "llm_only": "LLM Only",
+            "basic_rag": "Basic RAG",
+            "graphrag": "TigerGraph GraphRAG"
+        }
+        accent_map = {
+            "llm_only": "red",
+            "basic_rag": "yellow",
+            "graphrag": "cyan"
+        }
+        exc = RuntimeError(error_msg)
+        return timed(lambda: self._pipeline_error(
+            key, 
+            label_map.get(key, key),
+            accent_map.get(key, "gray"),
+            exc
+        ))
 
     def _pipeline_error(
         self, key: str, label: str, accent: str, exc: Exception
