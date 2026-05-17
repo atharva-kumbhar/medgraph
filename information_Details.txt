@@ -1,0 +1,299 @@
+there main page -|  |  |
+| --- | --- |
+| **Beginner-friendly** | No prior TigerGraph or graph experience required. Python and basic LLM API usage is enough. |
+| **Open globally** | Students, professionals, solo builders, and teams welcome. |
+| **$700 prize pool** | Cash prizes plus mentoring from the TigerGraph engineering team for the Top 10. |
+| **Make an impact** | Your findings and contributions will help solve a real and growing industry-wide problem: token efficiency in production AI. |
+| **Free to enter** | No fees, no catches. |
+| **Free TigerGraph stack access** | Full free access to Savanna ($60 in credits, more if needed), Community Edition, MCP, and the GraphRAG repo. |
+| **Direct engineer access** | 1:1 mentoring sessions, office hours, and WhatsApp support throughout. |
+
+| Criteria | Weight | What We're Looking For |
+| --- | --- | --- |
+| **Token Reduction** | 30% | % improvement in tokens and cost per query vs Basic RAG. Show us the numbers. |
+| **Answer Accuracy** | 30% | Quality maintained or improved. Evaluated with LLM-as-a-Judge + BERTScore. |
+| **Performance** | 20% | Latency, throughput, and overall system efficiency. A fast pipeline matters as much as a cheap one. |
+| **Engineering & Storytelling** | 20% | Clean architecture, working dashboard, clear demo video, blog post that tells the story. |
+
+[🐯 GraphRAG Inference Hackathon by TigerGraph](https://www.notion.so/GraphRAG-Inference-Hackathon-by-TigerGraph-34fc2cb129c08146998af3568d7d2594?pvs=21) 
+unstop page -Stages and Timelines
+4
+May
+04 May 26, 12:00 PM IST
+--> 16 May 26, 11:59 PM IST
+Building & Submission Phase
+OnGo to Unstop Home Page
+Teams will build their three-pipeline GraphRAG system (LLM-Only, Basic RAG, and GraphRAG) and submit all deliverables through Unstop before the deadline.
+
+Detailed submission guidelines will be shared separately with all registered teams.
+
+After Round 1, the Top 10 teams will be shortlisted and move forward to mentoring sessions and the final judging round in Round 2.
+
+Here is the Problem Statement: Notion Page
+
+
+Live
+Submit
+18
+May
+18 May 26, 12:00 AM IST
+--> 24 May 26, 11:59 PM IST
+Final Judging & Winner Announcement
+OnGo to Unstop Home Page
+The Top 10 teams announced on May 18 will enter the final round.
+
+They will receive 1:1 mentoring sessions with TigerGraph experts between May 18–24 to refine their solutions.
+
+On May 25, teams will present their GraphRAG solutions live to the judging panel - demoing their three-pipeline system, showcasing their benchmark dashboard, and defending their results in a Q&A.
+
+Winners will be announced on May 26, 2026.
+
+
+All that you need to know about GraphRAG Inference Hackathon by TigerGraph
+Welcome to the GraphRAG Inference Hackathon by TigerGraph!
+
+A beginner-friendly online coding challenge where you'll prove that graphs 
+make LLM inference faster, cheaper, and smarter than vector-based RAG alone.
+
+
+About the Opportunity:
+
+LLMs are spreading rapidly across every industry, and as they do, token 
+consumption is exploding. Companies pay more, wait longer, and hit context 
+limits faster every quarter. This isn't an academic exercise. It's a real, 
+growing pain in production AI today.
+
+The GraphRAG Inference Hackathon by TigerGraph is your chance to prove that 
+graphs solve this. You'll build three pipelines side-by-side (raw LLM, Basic 
+RAG, and GraphRAG) and let the numbers tell the story.
+
+The headline metric: token reduction with maintained accuracy. Show us how 
+much GraphRAG cuts down without dropping answer quality, and you'll have 
+built the kind of project that gets hiring managers, AI teams, and the 
+open-source community paying attention.
+
+New to GraphRAG? No problem. This hackathon is designed to be 
+beginner-friendly. You don't need prior experience with TigerGraph or graph 
+databases. If you know Python and have played with LLMs or APIs, you're 
+ready to build. We provide documentation, starter resources, and 1:1 
+mentoring sessions for the Top 10 teams.
+
+Whether you're a student exploring GenAI, a developer curious about graphs, 
+or an AI engineer building production RAG systems, this hackathon is your 
+playground to learn, build, and compete.
+
+
+What You will Build:
+
+Three pipelines that answer the same questions on the same data, plus an 
+interactive comparison dashboard.
+
+Pipeline 1: LLM-Only (Baseline). A prompt goes in, an output comes out. 
+No retrieval. Your worst-case baseline.
+Pipeline 2: Basic RAG (Vector + LLM). Vector embeddings retrieve similar 
+chunks, the LLM generates an answer using that context. The current 
+industry standard.
+Pipeline 3: GraphRAG (Graph + LLM). Built on top of the TigerGraph 
+GraphRAG repo. TigerGraph extracts entities, maps relationships, and 
+performs multi-hop reasoning. The LLM generates the final answer using 
+this filtered, structured context, not a giant document dump.
+Comparison Dashboard: An interactive page where you enter one query and 
+all three pipelines respond side-by-side. Tracks tokens used, response 
+latency, cost per query, and answer accuracy (evaluated using LLM-as-a-Judge 
++ BERTScore via Hugging Face). One query in, three answers + metrics out, 
+side-by-side. That's the story.
+
+Full Problem Statement & Hackathon Guidebook:
+Hackathon Problem Statement
+
+This Notion guide has everything you need: the two-round structure, dataset 
+requirements, judging criteria, deliverables, accuracy evaluation methodology, 
+mentoring details, and step-by-step setup. Bookmark it before you start 
+building.
+
+
+Join the Hackathon WhatsApp Group:
+Hackathon Participants WhatsApp Group
+
+This is where the action is. Get help from mentors, connect with other 
+builders, ask questions, share progress, and stay updated on announcements 
+throughout the hackathon.
+
+
+Eligibility and Registration:
+
+Open to students and working professionals globally. Beginners are welcome!
+Team size: 1 to 5 members (solo participation allowed).
+Each participant can be part of only one team.
+Cross-institutional teams are welcome.
+Participation is completely free. 
+
+Rewards and Prizes:
+
+Winner (1st Place): $250 cash prize, certificate, and recognition for 
+building the best GraphRAG inference system.
+1st Runner-Up (2nd Place): $150 cash prize and certificate for outstanding 
+GraphRAG implementation.
+2nd Runner-Up (3rd Place): $100 cash prize and certificate for strong 
+graph utilization and efficient inference design.
+TigerGraph Community Leads' Exclusive Award: $100 cash prize and 
+certificate. A special award for creativity, innovation, and community 
+spirit.
+$100 Content Bounty: Want to earn extra by sharing your hackathon journey?
+Create content (blog posts, social media posts, video walkthroughs, tutorials)
+about your GraphRAG build and stand a chance to win a $100 content bounty.
+
+Sign up here and there accuracy checking page -# Accuracy Evaluation Guide
+
+Building three pipelines and showing token reduction is only half the story. The other half is proving that **GraphRAG's answers are actually good** — not just shorter, but accurate and trustworthy.
+
+Every team is required to evaluate answer quality using **two complementary Hugging Face approaches**. Together they tell us whether your GraphRAG pipeline is genuinely winning or just cutting corners.
+
+---
+
+## Why Two Methods?
+
+A single accuracy metric can be gamed or misleading. Using two independent methods gives you robust, defensible accuracy numbers and shows judges you took evaluation seriously.
+
+---
+
+## Method 1: LLM-as-a-Judge (Primary)
+
+You ask another AI to grade your answers.
+
+For each question in your evaluation set, you send three things to a judge LLM (a free Hugging Face hosted model like Llama-3.1-8B-Instruct): the question, the correct answer, and your pipeline's answer. The judge returns a verdict: **PASS** or **FAIL**.
+
+**What it captures:** Real-world correctness. Did the answer actually address the question? Did it hallucinate? Did it contradict the source? This is the closest you can get to a human grader.
+
+**Tools:**
+
+- `huggingface_hub.InferenceClient` to call hosted models
+- Free monthly inference credits cover hackathon-scale evaluations (50–100 calls easily)
+- Recommended judge: `meta-llama/Llama-3.1-8B-Instruct`
+
+---
+
+## Method 2: BERTScore (Validator)
+
+You measure how semantically similar your answer is to the correct answer.
+
+BERTScore uses an embedding model to compare the meaning of two pieces of text — even if they use completely different words. So *"Apple was founded by Steve Jobs and Steve Wozniak"* and *"Steve Jobs and Wozniak created Apple together"* score nearly identically.
+
+**What it captures:** Semantic accuracy. Even when answers are reworded, BERTScore catches whether the meaning is preserved.
+
+**Tools:**
+
+- `evaluate.load("bertscore")` from the Hugging Face `evaluate` library
+- Runs locally on CPU after a one-time model download
+- Always set `rescale_with_baseline=True` for an honest 0–1 scale
+
+---
+
+## How to Set It Up
+
+### Step 1: Build Your Ground-Truth Set (~20 minutes)
+
+Hand-write or generate **30–50 questions** about your dataset with correct reference answers. Aim for variety: factual questions, multi-hop reasoning, and synthesis questions that require connecting multiple documents.
+
+```json
+[
+  {
+    "question": "Which two researchers collaborated on the 2023 paper about transformer efficiency?",
+    "correct_answer": "Dr. Smith and Dr. Patel co-authored the paper."
+  },
+  {
+    "question": "What was the impact of the merger between Company A and Company B?",
+    "correct_answer": "The merger consolidated their market position and reduced operational costs by 40%."
+  }
+]
+```
+
+### Step 2: Run All 3 Pipelines (~30 minutes)
+
+Send the same questions through your LLM-only, Basic RAG, and GraphRAG pipelines. Save every answer.
+
+### Step 3: Evaluate Using Both Methods (~20 minutes)
+
+```python
+import os
+import evaluate
+from huggingface_hub import InferenceClient
+
+# Setup
+client = InferenceClient(
+    model="meta-llama/Llama-3.1-8B-Instruct",
+    token=os.environ["HF_TOKEN"]  # free Hugging Face account token
+)
+bertscore = evaluate.load("bertscore")
+
+JUDGE_PROMPT = """Grade the system's answer.
+Question: {q}
+Correct answer: {correct}
+System answer: {answer}
+
+Reply with only PASS or FAIL.
+PASS = the system answer correctly addresses the question with no major errors.
+FAIL = the answer is wrong, missing, or contradicts the correct answer."""
+
+def evaluate_pipeline(pipeline_outputs, ground_truth):
+    judge_results = []
+    
+    for output, truth in zip(pipeline_outputs, ground_truth):
+        # LLM-as-a-Judge
+        prompt = JUDGE_PROMPT.format(
+            q=truth["question"],
+            correct=truth["correct_answer"],
+            answer=output
+        )
+        verdict = client.chat_completion(
+            [{"role": "user", "content": prompt}],
+            max_tokens=10, temperature=0.0
+        )
+        judge_results.append("PASS" in verdict.choices[0].message.content.upper())
+    
+    # BERTScore (batch)
+    bert_results = bertscore.compute(
+        predictions=pipeline_outputs,
+        references=[t["correct_answer"] for t in ground_truth],
+        lang="en",
+        rescale_with_baseline=True  # honest 0–1 scale
+    )
+    
+    return {
+        "llm_judge_pass_rate": sum(judge_results) / len(judge_results),
+        "bertscore_f1": sum(bert_results["f1"]) / len(bert_results["f1"])
+    }
+```
+
+### Step 4: Display in Your Dashboard
+
+Show accuracy metrics for all three pipelines side-by-side, alongside tokens, latency, and cost.
+
+---
+
+## Bonus Points for High Accuracy
+
+Strong accuracy isn't a hard requirement, but it's heavily rewarded. Submissions hitting these bars earn extra points in judging:
+
+- High pass rate on the LLM-as-a-Judge evaluation (≥ 90%)
+- Strong semantic similarity on BERTScore F1 rescaled (≥ 0.55) or its raw variant (≥ 0.88)
+- Hitting both unlocks the maximum bonus
+
+These thresholds represent a strong, defensible "good answers" bar:
+
+- **90% pass rate** means 9 out of 10 answers are correct under independent AI grading
+- **Rescaled BERTScore ≥ 0.55** indicates strong semantic similarity to the ground truth (rescaled scale: 0 = random, 1 = perfect)
+
+> **Why this matters:** Token reduction without accuracy isn't a win — it's a regression. A team that cuts tokens by 70% but produces wrong answers hasn't proven anything. The bonus rewards teams that prove GraphRAG is genuinely better, not just cheaper.
+> 
+
+---
+
+## What Goes in Your Submission
+
+Include both metrics for each pipeline in:
+
+1. **The comparison dashboard** — accuracy as a primary metric alongside tokens, latency, and cost
+2. **Your benchmark report** — LLM-as-a-Judge pass rate and BERTScore F1 (rescaled) per pipeline
+
+A clean, defensible accuracy number is what separates strong submissions from average ones.

@@ -1,0 +1,72 @@
+[
+  {
+    "chunk_id": "acr_acute_chest_pain_001",
+    "source": "ACR",
+    "category": "imaging",
+    "entities": ["chest pain", "acute coronary syndrome", "ECG", "troponin", "CT pulmonary angiography"],
+    "content": "Medical Scenario: Adult patient with acute chest pain and shortness of breath. Recommended Procedure: initial ECG and cardiac troponin for suspected acute coronary syndrome; CT pulmonary angiography may be considered when pulmonary embolism is suspected. Recommendation Details: imaging and lab choice should account for renal function, contrast risk, and hemodynamic stability."
+  },
+  {
+    "chunk_id": "openfda_beta_blocker_014",
+    "source": "OpenFDA",
+    "category": "drug",
+    "entities": ["beta blockers", "asthma", "shortness of breath", "nonselective beta blockers"],
+    "content": "Drug: beta blockers. Contraindications and Warnings: nonselective beta blockers can worsen bronchospasm in patients with asthma or reactive airway disease. Drug Interactions: concurrent cardiopulmonary disease requires medication history review and monitoring for shortness of breath."
+  },
+  {
+    "chunk_id": "pubmed_diabetes_cardiac_031",
+    "source": "PubMed",
+    "category": "research",
+    "entities": ["diabetes", "acute coronary syndrome", "kidney disease", "cardiology referral"],
+    "content": "Research summary: diabetes increases cardiovascular risk and can change presentation of acute coronary syndrome. Patients with diabetes and chest pain should be evaluated carefully for ischemia and referred urgently when ECG or troponin findings are concerning."
+  },
+  {
+    "chunk_id": "acr_renal_contrast_055",
+    "source": "ACR",
+    "category": "imaging",
+    "entities": ["kidney failure", "contrast imaging", "eGFR", "renal dosing review"],
+    "content": "Medical Scenario: patient with kidney failure or reduced eGFR requiring imaging. Recommended Procedure: review renal function before contrast imaging, consider alternatives when risk is high, and adjust medication dosing when kidney disease affects clearance."
+  },
+  {
+    "chunk_id": "pubmed_pulmonary_embolism_082",
+    "source": "PubMed",
+    "category": "research",
+    "entities": ["shortness of breath", "pulmonary embolism", "CT pulmonary angiography", "anticoagulation"],
+    "content": "Research summary: shortness of breath with pleuritic chest pain can suggest pulmonary embolism. CT pulmonary angiography is a common diagnostic test when pretest probability and renal function permit. Confirmed pulmonary embolism is commonly treated with anticoagulation unless contraindicated."
+  },
+  {
+    "chunk_id": "acr_glioblastoma_mri_103",
+    "source": "ACR",
+    "category": "imaging",
+    "entities": ["glioblastoma", "MRI brain with contrast", "radiation therapy"],
+    "content": "Medical Scenario: suspected or known glioblastoma. Recommended Procedure: MRI brain with contrast for diagnosis, treatment planning, and follow-up assessment. Recommendation Details: results often guide surgical planning, radiation therapy, and oncology care coordination."
+  },
+  {
+    "chunk_id": "openfda_aspirin_177",
+    "source": "OpenFDA",
+    "category": "drug",
+    "entities": ["aspirin", "acute coronary syndrome", "bleeding risk"],
+    "content": "Drug: aspirin. Indications and Warnings: aspirin is frequently used in suspected acute coronary syndrome when not contraindicated, but bleeding risk, allergy, and concurrent anticoagulant use should be reviewed."
+  },
+  {
+    "chunk_id": "pubmed_pneumonia_xray_211",
+    "source": "PubMed",
+    "category": "research",
+    "entities": ["pneumonia", "shortness of breath", "chest X-ray", "antibiotics"],
+    "content": "Research summary: pneumonia can present with cough, fever, chest discomfort, and shortness of breath. Chest X-ray supports diagnosis when clinical features suggest infection. Treatment may include antibiotics selected by severity and patient risk factors."
+  },
+  {
+    "chunk_id": "acr_diabetes_kidney_244",
+    "source": "ACR",
+    "category": "imaging",
+    "entities": ["diabetes", "kidney disease", "eGFR", "contrast imaging"],
+    "content": "Medical Scenario: diabetic patient with possible kidney disease. Recommended Procedure: evaluate eGFR and renal risk before contrast imaging. Recommendation Details: diabetes can coexist with kidney disease, affecting imaging choices and medication clearance."
+  },
+  {
+    "chunk_id": "openfda_anticoagulation_319",
+    "source": "OpenFDA",
+    "category": "drug",
+    "entities": ["anticoagulation", "pulmonary embolism", "kidney disease", "bleeding risk"],
+    "content": "Drug class: anticoagulation. Indications and Warnings: anticoagulants are used for confirmed or strongly suspected thromboembolic disease such as pulmonary embolism. Renal function and bleeding risk affect agent selection and dosing."
+  }
+]

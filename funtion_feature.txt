@@ -1,0 +1,175 @@
+1) Hero Section (First screen)
+
+Minimal, premium look.
+
+Left side:
+
+Big title:
+MedGraph AI
+
+Subtitle:
+
+Compare LLM-only, Basic RAG, and TigerGraph GraphRAG for complex medical reasoning.
+
+Search bar:
+Ask a medical question...
+
+Example chips:
+
+Chest pain causes
+Diabetes complications
+Kidney failure treatment
+
+Button:
+Run Analysis
+
+Right side:
+
+Animated 3D graph/network visualization
+
+Nodes:
+
+Symptoms
+Disease
+Test
+Treatment
+
+This gives instant “GraphRAG” feel.
+
+6
+2) Live Comparison Section (Most Important)
+
+After clicking Run Analysis:
+
+Three cards appear side-by-side:
+
+Card 1 → LLM Only
+
+Red accent
+Shows:
+
+answer
+token count
+latency
+cost
+hallucination warning
+Card 2 → Basic RAG
+
+Yellow accent
+Shows:
+
+answer
+retrieved chunks
+token count
+latency
+cost
+Card 3 → GraphRAG
+
+Green/blue accent
+Shows:
+
+answer
+graph traversal path
+token count
+latency
+cost
+accuracy score
+
+GraphRAG card should visually feel superior.
+
+3) Metrics Dashboard
+
+Charts section:
+
+Token usage bar chart
+Cost chart
+Latency chart
+Accuracy chart
+
+Could use:
+Recharts
+or Chart.js
+
+7
+4) Graph Visualization Modal
+
+Button:
+
+View Graph Reasoning
+
+Opens popup:
+
+Chest Pain
+→ Heart Disease
+→ ECG
+→ Treatment
+
+Shortness of Breath
+→ Lung Disease
+→ Scan
+→ Medication
+
+Use:
+React Flow
+or D3.js
+
+5) Retrieval Inspector (collapsible)
+
+Advanced users/judges can inspect:
+
+retrieved chunks
+vector similarity score
+graph neighbors
+entities extracted
+
+Hidden by default.
+
+6) Architecture Timeline
+
+Animated pipeline flow:
+
+LLM Only
+Query → LLM
+
+Basic RAG
+Query → Vector DB → LLM
+
+GraphRAG
+Query → Vector DB → TigerGraph → LLM
+
+7) Accuracy Evaluation Section
+
+Since hackathon explicitly requires this:
+
+Cards showing:
+
+LLM Judge
+
+PASS %
+
+BERTScore
+Total benchmark summary
+8) Demo Dataset Stats
+
+Show credibility:
+
+13,807 medical chunks
+millions of tokens
+X relationships
+Y entities
+9) Footer
+GitHub repo
+demo video
+architecture PDF
+team info
+Features
+
+✅ Query all 3 pipelines simultaneously
+✅ Side-by-side comparison
+✅ Token tracking
+✅ Cost tracking
+✅ Latency tracking
+✅ Accuracy evaluation
+✅ Graph visualization
+✅ Retrieved chunk viewer
+✅ Clean storytelling UI-2. Main Page Sections & FeaturesA. The "Hero" Query InputFeature: A single, large search bar at the top center.Function: When a user types a medical query, it triggers all three pipelines (LLM-Only, Basic RAG, GraphRAG) simultaneously.Quick-Start Chips: Buttons below the search bar with pre-set "Multi-hop" questions like:"Show drug-drug interactions for patients on Beta-blockers with a history of Asthma.""Trace the ripple effect of a new dosage regulation on clinical SOPs."B. The "Battleground" (Side-by-Side Comparison)Create three vertical cards. Each card must display:Response Text: The generated answer.Evidence Source:Basic RAG: Shows "Top 3 Semantic Chunks."GraphRAG: Shows "Graph Path Traversed" (e.g., Drug A → Inhibits → Enzyme B).Accuracy Badge: A real-time label for LLM-as-a-Judge (PASS/FAIL) and the BERTScore value (e.g., 0.92).C. The "Live Metric Ticker" (The Hackathon Hook)Directly under the answers, show a comparison table. This is what judges will look at first:MetricLLM-OnlyBasic RAGGraphRAG (TigerGraph)Tokens Used1,200850320 (Winner)Est. Cost$0.02$0.015$0.004Latency1.2s2.5s1.8sAccuracy40%75%95%🔍 3. Key Advanced Features1. The "Adjacency Explorer" (TigerGraph Visualization)Feature: An interactive graph widget (using react-force-graph or ReGraph).Function: When a user clicks on the GraphRAG result, the graph centers on the specific nodes and edges that were retrieved.Why: It proves you actually used the graph and didn't just "fake" the answer.2. The "Token Burn" ChartFeature: A real-time line or bar chart showing the cumulative "Token Savings" of your system compared to traditional RAG.Value: It visually proves the "Inference Efficiency" theme of the hackathon.3. "Ground-Truth" Management Tab (Admin View)Function: A page where you can upload your JSON file of 30–50 "Ground-Truth" questions.Feature: A button to "Run Bulk Benchmark" which generates the data for your final report.🛠️ 4. Technical Implementation DetailsFrontend Framework: Streamlit (easiest for Python devs) or Next.js (best for a "product" feel).Evaluation Hook:Integrate the InferenceClient from Hugging Face directly into your UI submit function.While the LLM is generating, calculate the BERTScore on the backend so both appear together.TigerGraph Connection: Use the TigerGraph REST API to fetch the sub-graph for the specific query to render your visualization.📝 5. Navigation Structure (Menu)Dashboard: The live 3-pipeline comparison tool.Benchmarks: Static charts showing your system's performance over the entire dataset.Graph Schema: A page explaining your TigerGraph vertex/edge types (essential for judges to see your logic).About: Your team details and the "Problem Statement" you chose.
