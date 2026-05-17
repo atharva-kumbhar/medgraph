@@ -618,7 +618,7 @@ class TigerGraphClient:
             url,
             headers=headers,
             params={"entity_name": entity_name},
-            timeout=settings.request_timeout_seconds,
+            timeout=settings.tigergraph_request_timeout_seconds,
             verify=self.verify_ssl,
         )
         if not response.ok:
@@ -647,7 +647,7 @@ class TigerGraphClient:
             response = requests.get(
                 url,
                 headers=headers,
-                timeout=settings.request_timeout_seconds,
+                timeout=settings.tigergraph_request_timeout_seconds,
                 verify=self.verify_ssl,
             )
         except requests.RequestException as exc:
@@ -679,7 +679,7 @@ class TigerGraphClient:
         url = f"{self.host}/restpp/requesttoken?secret={encoded_secret}"
         request = Request(url, headers={"Accept": "application/json"}, method="GET")
         try:
-            with urlopen(request, timeout=settings.request_timeout_seconds) as response:
+            with urlopen(request, timeout=settings.tigergraph_request_timeout_seconds) as response:
                 return json.loads(response.read().decode("utf-8"))
         except HTTPError as exc:
             details = exc.read().decode("utf-8", errors="replace")[:600]

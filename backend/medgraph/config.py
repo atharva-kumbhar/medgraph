@@ -59,7 +59,9 @@ class Settings:
     price_per_1k_tokens_usd: float = float(
         os.getenv("MEDGRAPH_PRICE_PER_1K_TOKENS", "0.0008")
     )
-    request_timeout_seconds: int = int(os.getenv("MEDGRAPH_REQUEST_TIMEOUT_SECONDS", "8"))
+    request_timeout_seconds: int = int(os.getenv("MEDGRAPH_REQUEST_TIMEOUT_SECONDS", "30"))
+    gemini_request_timeout_seconds: int = int(os.getenv("MEDGRAPH_GEMINI_TIMEOUT_SECONDS", "60"))
+    tigergraph_request_timeout_seconds: int = int(os.getenv("MEDGRAPH_TIGERGRAPH_TIMEOUT_SECONDS", "45"))
     nvidia_request_timeout_seconds: int = int(
         os.getenv("MEDGRAPH_NVIDIA_TIMEOUT_SECONDS", "120")
     )
