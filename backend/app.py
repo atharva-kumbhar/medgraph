@@ -32,24 +32,19 @@ def create_app() -> FastAPI:
         version="1.0.0",
         description="Real LLM, FAISS RAG, and TigerGraph GraphRAG medical benchmark API.",
     )
-
-    origins = [
-        "https://medgraph-oh13cnc39-atharvakumbhar3099-3395s-projects.vercel.app",
-        "https://medgraph-wgfw.onrender.com",
-        "*"
-    ]
+    
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=origins if origins != ["*"] else ["*"],
-        allow_credentials=True,
+        allow_origin_regex=".*",
+        allow_credentials=False,
         allow_methods=["*"],
         allow_headers=["*"],
     )
-
-    app.include_router(router)
-
-    frontend_dir = settings.frontend_dir
-    if frontend_dir.exists():
+    
+        app.include_router(router)
+    
+        frontend_dir = settings.frontend_dir
+        if frontend_dir.exists():
         static_names = {"styles.css", "app.js", "config.js"}
 
         @app.get("/")
