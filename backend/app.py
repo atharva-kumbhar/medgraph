@@ -34,9 +34,9 @@ def create_app() -> FastAPI:
     )
 
     origins = [
-        origin.strip()
-        for origin in os.getenv("MEDGRAPH_CORS_ORIGINS", "*").split(",")
-        if origin.strip()
+        "https://medgraph-oh13cnc39-atharvakumbhar3099-3395s-projects.vercel.app",
+        "https://medgraph-wgfw.onrender.com",
+        "*"
     ]
     app.add_middleware(
         CORSMiddleware,
