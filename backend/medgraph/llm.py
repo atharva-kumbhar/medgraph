@@ -131,7 +131,7 @@ class LLMClient:
             params={"key": settings.gemini_api_key},
             headers={"Content-Type": "application/json"},
             json=payload,
-            timeout=settings.request_timeout_seconds,
+            timeout=settings.gemini_request_timeout_seconds,
         )
         self._raise_for_status(response)
         data = response.json()
